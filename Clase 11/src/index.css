@@ -1,0 +1,28 @@
+
+
+body{
+    background-color: #d6d2dd;
+}   
+.cabecera{
+    background-color: #e8b6ec;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    align-items:center;
+    
+
+}
+.cabecera img {
+    height: 150px;
+}
+@font-face {
+    font-family: Metamorphous;
+    src: url(./Metamorphous-Regular.ttf);
+}
+.pie{
+    background-color: rgb(173, 196, 216);
+}
+html {
+    font-family: Metamorphous;
+}
