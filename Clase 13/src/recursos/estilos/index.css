@@ -3,12 +3,12 @@ Sintaxis CSS
 
 Regla o Rule
 */
-/*
+
 selector{
     propiedad1: valor;
     propiedad2: valor;
 }
-*/
+
 @font-face{
     font-family: Monserrat;
     src: url(./fuentes/Montserrat-Regular.ttf);
@@ -48,11 +48,10 @@ p{
     font-size: 0.8rem; /* busca la referencia de la raiz y lo multipla por el numero indicado */
     /* em */
 }
-/* SELECTORES DE CLASE */
 
-/* .vinculos{
+ .vinculos{
     color: #222;
-} */
+} 
 
 /* --------------- */
 
@@ -65,25 +64,36 @@ p{
     justify-content: space-between;
     align-items: center;
     background-color: #ccc;
-    padding:5px;
+    padding:5px; 
 }
+.encabezado-principal nav {
+    display: none;
+}
+
+.encabezado-principal .boton-menu {
+    display: block;
+}
+
 
 .encabezado-principal a img{
   width: 50px;
 }
 
+.encabezado-principal
 .encabezado-principal .vinculos a{
     color: #222;
 }
 
-/* ----------------- */
 .contenido-principal{
     background-color: #fff;
     height: 1500px;
 }
 
-
-COMPORTAMIENTO DE POSICIONAMIENTO ABSOLUTO
+.encabezado-principal .boton.menu{
+    display: block;
+    
+}
+/*COMPORTAMIENTO DE POSICIONAMIENTO ABSOLUTO */
 .contenido-principal .parrafo{
     position: absolute;
     top: 50px;
@@ -91,9 +101,9 @@ COMPORTAMIENTO DE POSICIONAMIENTO ABSOLUTO
     background-color: #ffff00;
     padding: 10px;
     width: 300PX;
+    
 } 
 
-/* ----------------------*/ 
 .pie-principal{
     background-color: #ccc;
 }
@@ -105,9 +115,23 @@ COMPORTAMIENTO DE POSICIONAMIENTO ABSOLUTO
     list-style: none;
 }
 /* Selector ID */
-/* #contactos{
+ #contactos{
     background-color: #ffff00;
-} */
+} 
+
+@media(width >600px) {
+    .encabezado-principal nav {
+        display: block;
+    }
+    .encabezado-principal .boton-menu {
+        display: none;
+    }
+    .contenido-principal {
+        background-color: #aaa0aa;
+        height: 1500px;
+    }
+
+}
 
 /* Selector Atributo*/
 
