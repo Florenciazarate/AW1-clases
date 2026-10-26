@@ -70,25 +70,28 @@ const productosMascotas = [
         precio: 8.50
     }
 ];
-const ola = document.getElementById("contenedor-productos")
-productosMascotas.forEach(element => {
-    ola.innerHTML += `  <article>
-                        <h3>${element.nombre}</h3>
-                        <picture>
-                            <img src="./lindo-perro-retrato-aislado_23-2150194182.avif" alt="perro">
-                        </picture>
-                        <p>
-                            ${element.descripcion}
-                        </p>
-                        <ul>
-                            <li>
-                            ${element.talles}
-                            </li>
-                            <li>
-                            ${element.precio}
-                            </li>
-                        </ul>
-                        <button>añadir al carro</button>
-                    </article>`
+function renderizarProductos(contenedor, productos) {
+    let html = "";
 
-});
+    productos.forEach((producto) => {
+        html += `<article>
+                    <h3>${producto.nombre}</h3>
+                    <picture>
+                        <img src="./lindo-perro-retrato-aislado_23-2150194182.avif" alt="perro">
+                    </picture>
+                    <p>
+                        ${producto.descripcion}
+                    </p>
+                    <ul>
+                        <li>${producto.talles}</li>
+                        <li>${producto.precio}</li>
+                    </ul>
+                    <button>añadir al carro</button>
+                </article>`;
+    });
+
+    return html;
+}
+
+const contenedor = document.getElementById("contenedor-productos");
+contenedor.innerHTML = renderizarProductos(contenedor, productosMascotas);
