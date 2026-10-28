@@ -14,7 +14,7 @@ function renderizarProductos(contenedor, productos) {
                         <li>${producto.talles}</li>
                         <li>${producto.precio}</li>
                     </ul>
-                    <button class= "boton-agregar-producto" data-id="${producto.id}">añadir al carro</button>
+                    <button class="boton-agregar-producto" data-id="${producto.id}">añadir al carro</button>
                 </article>`;
     });
 
